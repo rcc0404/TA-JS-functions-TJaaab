@@ -1,7 +1,10 @@
 /*
 1. Create a function named `sayHello` that alerts a message `Hello World!`.
 */
-
+function sayHello() {
+  let name = prompt("Enter the name");
+  alert("Hello World!");
+}
 /*
 2. Create a function named `fullName` with the following steps:
 
@@ -10,6 +13,12 @@
   - Concat the value of fistName and lastName and store it in another variable named `fullName`.
   - Alert `fullName`
 */
+function Concat() {
+  let firstName = prompt("Enter your First Name?");
+  let secondName = prompt("Enter your last Name?");
+
+  alert("The concat of these two name are (${firstName} + " " + ${secondName})");
+}
 
 /*
 3. Create a function named `addTwoNumbers` with the following steps:
