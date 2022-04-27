@@ -2,12 +2,12 @@
 1. Create a function named `sayHello` that that accepts a parameter `name` and alert `Hello [name]!`.
 */
 
-// function sayHello() {
-//   let name = prompt("Enter name");
-//   alert(`Hello ${name}`);
-// }
+function sayHello() {
+  let name = prompt("Enter name");
+  alert(`Hello ${name}`);
+}
 
-// sayHello();
+sayHello();
 
 /*
 2. Create a function named `getFullName` that accepts two parameter `firstName` and `lastName` and returns
@@ -18,13 +18,18 @@ Example:
   getFullName("Nelson", "Mandela"); // "Nelson Mandela"
 */
 
-// function getFullName() {
-//   let firstName = prompt("Enter First Name?");
-//   let secondName = prompt("Enter second name?");
-//   alert(`${firstName} ${secondName}`);
-// }
+function getFullName() {
+  let firstName = prompt("Enter First Name?");
+  let lasrName = prompt("Enter last name?");
+  alert(`${firstName} ${lastName}`);
+}
+getFullName();
 
-// getFullName();
+function getFullName(firstName, lastName) {
+  return `${firstName} ${lastName}`;
+}
+
+
 /*
 3. Create a function named `addTwoNumbers` that accepts two numbers i.e `firstNum` and `secondNum` and returns
 the sum of both numbers. If user passes any data other then numbers alert a message saying `Enter Valid Input`
@@ -34,15 +39,16 @@ addTwoNumbers(10, 22); // 32
 addTwoNumbers(20, 32); // 32
 addTwoNumbers(10, "100"); // Alert Enter Valid Input
 */
-// function addTwoNumbers() {
-//   let firstNum = +prompt("Enter first number?");
-//   let secondNum = +prompt("Enter second number?");
-//   addTwoNumbers = firstNum + secondNum;
-//   alert(addTwoNumbers);
-// }
-
-// addTwoNumbers();
-
+function addTwoNumbers(firstNum, secondNum) {
+  if (
+    typeof firstNum !== "number" ||
+    typeof secondNum !== "number"
+  ) {
+    alert(`Enter valid input`)
+  } else {
+    return firstNum + secondNum;
+  }
+}
 
 /*
 4. Create a function named `calc` which accepts three parameter `numA`, `numB` and `operation`. Operation
@@ -56,11 +62,26 @@ calc(20, 10, 'sub'); // 10
 calc(20, 10, 'mul'); // 200
 */
 
-function calc() { 
-  let numA = +prompt("Enter first number");
-  let numB = +prompt("Enter second number");
-  let operation = (add)
-
+function calc(firstNum, secondNum, operation) {
+  if (
+    typeof firstNum !== "number" ||
+    typeof secondNum !== "number"
+  ) {
+    alert(`Enter valid input`)
+  } else {
+    switch (operation) {
+      case "add":
+        return firstNum + secondNum;
+      case "sub":
+        return firstNum - secondNum;
+      case "mul":
+        return firstNum * secondNum;
+      case "div":
+        return firstNum / secondNum;
+      default:
+        alert("Enter valid operation");
+    }
+  }
 }
 
 /*
@@ -71,15 +92,21 @@ isLeapYear(2000); // true
 isLeapYear(2001); // false
 */
 
-function isLeapYear() {
-  let 
+function isLeapYear(year) {
+  if (year % 400 === 0) return true;
+  if (year % 400 === 0) return true;
+  return year % 4 === 0;
 }
 
 
 /*
 6. Create a function named `getFactorial` that accepts a number and return the factorial of the number.
 */
-function getFactorial() {
-  
+function getFactorial(num) {
+  let final = 1;
+  for (let i = num; i>= 1; i--) {
+    final *= i;
+  }
+  return final;
 }
   
