@@ -11,6 +11,8 @@ function convertToString(n) {
   return String(n);
 }
 
+convertToString();
+
 // - Write a Function Expression
 let convertToString = function (n) {
   return String(n);
