@@ -5,14 +5,17 @@
 Write a function named minToSec that takes an integer minutes and converts it to seconds.
 
 
+
 minToSec(50) ➞ 3000
 minToSec(13) ➞ 780
 minToSec(2) ➞ 120
 */
 
 // - Write a Function Decleration for above problem
-function minToSec() {
-  // Your code
+function minToSec(time) {
+  let seconds = time * 60 {
+    if 
+  } 
 }
 // - Execute the function with required parameter
 
